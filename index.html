@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background: url('img/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #000000;
+            margin-top: 56px;
+        }
+        .jumbotron {
+            background-color: #160214d2;
+            color: white;
+            padding: 2rem;
+        }
+        .custom-section {
+            padding: 20px;
+            background: #d9d9dad7;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background: linear-gradient(to right, #020202d8, #250838c9);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .gradient-navbar {
+            background: linear-gradient(to right, #020202d8, #250838c9);
+        }
+.custom-row {
+    display: flex;
+    gap: 20px; /* Add custom spacing between columns */
+    flex-wrap: nowrap; /* Prevent the columns from wrapping to the next line */
+}
+
+/* Ensure the columns are responsive on smaller screens */
+.custom-row .col-md-4 {
+    flex: 1; /* Make sure all columns are evenly distributed */
+}
+@media (max-width: 768px) {
+    .custom-row {
+        flex-direction: column; /* Stack columns vertically on small screens */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark gradient-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('home')">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('courses')">Courses</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section (Contains Everything) -->
+    <div id="home" class="section">
+        <div class="jumbotron text-center">
+            <h1>Welcome to My Page</h1>
+            <p>Learn more about me below!</p>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="img/Profile image.jpg" class="img-fluid rounded-circle" alt="Profile Image" width="200">
+                </div>
+                <div class="col-md-6 custom-section">
+                    <h2>About Me</h2>
+                    <p>Hi, I'm Mohamed, a software engineering student in Istanbul. I'm a passionate software engineering student with a strong interest in Data Structures & Algorithms, Java, JavaScript, HTML, and CSS. I enjoy solving complex problems and building efficient, scalable applications. My goal is to become a skilled Java Developer, creating robust backend systems while also mastering frontend technologies.</p>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12 custom-section">
+                    <h2>My Interests</h2>
+                    <p>I'm passionate about problem-solving and constantly strive to improve my coding skills. I enjoy tackling challenging algorithms and exploring new programming languages. I also take pleasure in staying up-to-date with the latest trends in technology and learning new methodologies that enhance both development processes and performance optimization.</p>
+                </div>
+            </div>
+            <div class="row mt-4 custom-row ">
+                <div class="col-md-4 custom-section">
+                    <h3>Problem Solving</h3>
+                    <p>Developing strong problem-solving skills is essential for tackling complex programming challenges. I enjoy breaking down large problems into smaller, manageable parts and finding the most efficient solution.</p>
+                </div>
+                <div class="col-md-4 custom-section">
+                    <h3>Web Development</h3>
+                    <p>I specialize in both frontend and backend development. By learning modern web technologies such as JavaScript, HTML, CSS, and backend frameworks, I build interactive websites and dynamic applications that provide a seamless user experience.</p>
+                </div>
+                <div class="col-md-4 custom-section">
+                    <h3>Software Design & Architecture</h3>
+                    <p>Creating scalable and maintainable software systems is key in software engineering. I focus on understanding software design patterns, best practices, and architecture principles to build high-quality, robust applications.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Courses Section (Updated from About) -->
+    <div id="courses" class="section" style="display: none;">
+        <div class="container mt-4">
+            <!-- First Row: My Courses -->
+            <div class="row">
+                <div class="col-md-12 custom-section">
+                    <h2>My Courses</h2>
+                    <p>Here are some of the courses I have studied as part of my software engineering degree:</p>
+                    <ul>
+                        <li>Introduction to Programming</li>
+                        <li>Data Structures & Algorithms</li>
+                        <li>Object-Oriented Programming</li>
+                        <li>Web Development</li>
+                        <li>Database Management</li>
+                        <li>Operating Systems</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Second Row: Course Details -->
+            <div class="row mt-4 g-4 custom-row">
+                <div class="col-md-4 custom-section">
+                    <h3>Algorithms</h3>
+                    <p>Learn how algorithms and data structures can help solve complex problems and optimize code.</p>
+                </div>
+                <div class="col-md-4 custom-section">
+                    <h3>Web Programming</h3>
+                    <p>Explore both frontend and backend technologies to create dynamic, user-friendly websites.</p>
+                </div>
+                <div class="col-md-4 custom-section">
+                    <h3>Computer Systems</h3>
+                    <p>Understand how operating systems, hardware, and software interact to make computers function.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-4">
+        <p>&copy; 2025 Mohamed | All Rights Reserved</p>
+        <div class="d-flex justify-content-center mt-2">
+            <a href="https://github.com/moashebl" target="_blank" class="text-white mx-2">
+                <i class="bi bi-github" style="font-size: 1.5rem;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mohamed-alaa-54236727a" target="_blank" class="text-white mx-2">
+                <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showSection(section) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(function (sec) {
+                sec.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(section).style.display = 'block';
+        }
+
+        // Initialize by showing the Home section
+        showSection('home');
+    </script>
+</body>
+</html>
